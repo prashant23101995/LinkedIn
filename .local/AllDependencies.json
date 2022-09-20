@@ -5392,15 +5392,15 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\user\\.nuget\\packages\\": {}
+    "C:\\Users\\XLNC\\.nuget\\packages\\": {}
   },
   "project": {
     "restore": {
       "projectUniqueName": "LinkedIn",
       "projectName": "LinkedIn",
-      "projectPath": "F:\\Prashant\\XLNC\\MyProjects\\LinkedIn\\.local",
-      "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-      "outputPath": "F:\\Prashant\\XLNC\\MyProjects\\LinkedIn\\.local"
+      "projectPath": "C:\\Users\\XLNC\\Documents\\UiPath\\LinkedInBot\\.local",
+      "packagesPath": "C:\\Users\\XLNC\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\XLNC\\Documents\\UiPath\\LinkedInBot\\.local"
     },
     "frameworks": {
       "net461": {
@@ -5451,7 +5451,7 @@
             "version": "[1.0.7107.42453, 1.0.7107.42453]"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Users\\user\\AppData\\Local\\Programs\\UiPath\\Studio\\runtime.json"
+        "runtimeIdentifierGraphPath": "C:\\Users\\XLNC\\AppData\\Local\\Programs\\UiPath\\Studio\\runtime.json"
       }
     },
     "runtimes": {
@@ -5459,18 +5459,5 @@
         "#import": []
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU1603",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Microsoft.Extensions.Primitives 3.1.6 depends on System.Memory (>= 4.5.2) but System.Memory 4.5.2 was not found. An approximate best match of System.Memory 4.5.3 was resolved.",
-      "libraryId": "System.Memory",
-      "targetGraphs": [
-        ".NETFramework,Version=v4.6.1",
-        ".NETFramework,Version=v4.6.1/win10-x64"
-      ]
-    }
-  ]
+  }
 }
