@@ -124,6 +124,15 @@
           "lib/net45/Google.Apis.PeopleService.v1.dll": {}
         }
       },
+      "HtmlAgilityPack/1.8.2": {
+        "type": "package",
+        "compile": {
+          "lib/Net45/_._": {}
+        },
+        "runtime": {
+          "lib/Net45/HtmlAgilityPack.dll": {}
+        }
+      },
       "MailKit/2.10.0": {
         "type": "package",
         "dependencies": {
@@ -1638,6 +1647,18 @@
         "runtime": {
           "lib/net451/Excel.Activites.Design.dll": {},
           "lib/net451/Excel.Activities.dll": {}
+        }
+      },
+      "UiPathTeam.XPathWebScrape.Activities/1.0.1": {
+        "type": "package",
+        "dependencies": {
+          "HtmlAgilityPack": "1.8.2"
+        },
+        "compile": {
+          "lib/_._": {}
+        },
+        "runtime": {
+          "lib/XPathWebScrape.dll": {}
         }
       }
     },
@@ -1764,6 +1785,15 @@
           "lib/net45/Google.Apis.PeopleService.v1.dll": {}
         }
       },
+      "HtmlAgilityPack/1.8.2": {
+        "type": "package",
+        "compile": {
+          "lib/Net45/_._": {}
+        },
+        "runtime": {
+          "lib/Net45/HtmlAgilityPack.dll": {}
+        }
+      },
       "MailKit/2.10.0": {
         "type": "package",
         "dependencies": {
@@ -3278,6 +3308,18 @@
         "runtime": {
           "lib/net451/Excel.Activites.Design.dll": {},
           "lib/net451/Excel.Activities.dll": {}
+        }
+      },
+      "UiPathTeam.XPathWebScrape.Activities/1.0.1": {
+        "type": "package",
+        "dependencies": {
+          "HtmlAgilityPack": "1.8.2"
+        },
+        "compile": {
+          "lib/_._": {}
+        },
+        "runtime": {
+          "lib/XPathWebScrape.dll": {}
         }
       }
     }
@@ -3480,6 +3522,54 @@
         "lib/netstandard2.0/Google.Apis.PeopleService.v1.dll",
         "lib/netstandard2.0/Google.Apis.PeopleService.v1.pdb",
         "lib/netstandard2.0/Google.Apis.PeopleService.v1.xml"
+      ]
+    },
+    "HtmlAgilityPack/1.8.2": {
+      "sha512": "6eZx+QMxghcaVurr3QSa5FT0P5EgqxZBcalj5LpEEW3X72mKbbAuyaIaNUCifk467R68KgJA6x/W1VnYxBlT0Q==",
+      "type": "package",
+      "path": "htmlagilitypack/1.8.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "htmlagilitypack.1.8.2.nupkg.sha512",
+        "htmlagilitypack.nuspec",
+        "lib/Net20/HtmlAgilityPack.dll",
+        "lib/Net20/HtmlAgilityPack.pdb",
+        "lib/Net20/HtmlAgilityPack.xml",
+        "lib/Net40-client/HtmlAgilityPack.dll",
+        "lib/Net40-client/HtmlAgilityPack.pdb",
+        "lib/Net40-client/HtmlAgilityPack.xml",
+        "lib/Net40/HtmlAgilityPack.XML",
+        "lib/Net40/HtmlAgilityPack.dll",
+        "lib/Net40/HtmlAgilityPack.pdb",
+        "lib/Net45/HtmlAgilityPack.XML",
+        "lib/Net45/HtmlAgilityPack.dll",
+        "lib/Net45/HtmlAgilityPack.pdb",
+        "lib/NetCore45/HtmlAgilityPack.XML",
+        "lib/NetCore45/HtmlAgilityPack.dll",
+        "lib/NetCore45/HtmlAgilityPack.pdb",
+        "lib/netstandard1.3/HtmlAgilityPack.deps.json",
+        "lib/netstandard1.3/HtmlAgilityPack.dll",
+        "lib/netstandard1.3/HtmlAgilityPack.pdb",
+        "lib/netstandard1.3/HtmlAgilityPack.xml",
+        "lib/netstandard1.6/HtmlAgilityPack.deps.json",
+        "lib/netstandard1.6/HtmlAgilityPack.dll",
+        "lib/netstandard1.6/HtmlAgilityPack.pdb",
+        "lib/netstandard1.6/HtmlAgilityPack.xml",
+        "lib/netstandard2.0/HtmlAgilityPack.deps.json",
+        "lib/netstandard2.0/HtmlAgilityPack.dll",
+        "lib/netstandard2.0/HtmlAgilityPack.pdb",
+        "lib/netstandard2.0/HtmlAgilityPack.xml",
+        "lib/portable-net45+netcore45+wp8+MonoAndroid+MonoTouch/HtmlAgilityPack.XML",
+        "lib/portable-net45+netcore45+wp8+MonoAndroid+MonoTouch/HtmlAgilityPack.dll",
+        "lib/portable-net45+netcore45+wp8+MonoAndroid+MonoTouch/HtmlAgilityPack.pdb",
+        "lib/portable-net45+netcore45+wpa81+wp8+MonoAndroid+MonoTouch/HtmlAgilityPack.XML",
+        "lib/portable-net45+netcore45+wpa81+wp8+MonoAndroid+MonoTouch/HtmlAgilityPack.dll",
+        "lib/portable-net45+netcore45+wpa81+wp8+MonoAndroid+MonoTouch/HtmlAgilityPack.pdb",
+        "lib/uap10.0/HtmlAgilityPack.XML",
+        "lib/uap10.0/HtmlAgilityPack.dll",
+        "lib/uap10.0/HtmlAgilityPack.pdb",
+        "lib/uap10.0/HtmlAgilityPack.pri"
       ]
     },
     "MailKit/2.10.0": {
@@ -5375,6 +5465,17 @@
         "uipathteam.excel.extensions.activities.1.0.7107.42453.nupkg.sha512",
         "uipathteam.excel.extensions.activities.nuspec"
       ]
+    },
+    "UiPathTeam.XPathWebScrape.Activities/1.0.1": {
+      "sha512": "hoPENaoukhieHyiwHscDVHq5eW1MzFS72kKHG5LSkR4xclZsWiB4hGOPXcAuZrpUu7k8RKO0rNhA+lVmM0gZxQ==",
+      "type": "package",
+      "path": "uipathteam.xpathwebscrape.activities/1.0.1",
+      "files": [
+        ".nupkg.metadata",
+        "lib/XPathWebScrape.dll",
+        "uipathteam.xpathwebscrape.activities.1.0.1.nupkg.sha512",
+        "uipathteam.xpathwebscrape.activities.nuspec"
+      ]
     }
   },
   "projectFileDependencyGroups": {
@@ -5388,7 +5489,8 @@
       "UiPath.System.Activities >= 21.4.0 <= 21.4.0",
       "UiPath.UIAutomation.Activities >= 21.4.3 <= 21.4.3",
       "UiPathTeam.Excel.Activities >= 1.1.2 <= 1.1.2",
-      "UiPathTeam.Excel.Extensions.Activities >= 1.0.7107.42453 <= 1.0.7107.42453"
+      "UiPathTeam.Excel.Extensions.Activities >= 1.0.7107.42453 <= 1.0.7107.42453",
+      "UiPathTeam.XPathWebScrape.Activities >= 1.0.1 <= 1.0.1"
     ]
   },
   "packageFolders": {
@@ -5449,6 +5551,11 @@
             "include": "Runtime",
             "target": "Package",
             "version": "[1.0.7107.42453, 1.0.7107.42453]"
+          },
+          "UiPathTeam.XPathWebScrape.Activities": {
+            "include": "Runtime",
+            "target": "Package",
+            "version": "[1.0.1, 1.0.1]"
           }
         },
         "runtimeIdentifierGraphPath": "C:\\Users\\XLNC\\AppData\\Local\\Programs\\UiPath\\Studio\\runtime.json"

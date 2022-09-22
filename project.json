@@ -11,7 +11,8 @@
     "UiPath.System.Activities": "[21.4.0]",
     "UiPath.UIAutomation.Activities": "[21.4.3]",
     "UiPathTeam.Excel.Activities": "[1.1.2]",
-    "UiPathTeam.Excel.Extensions.Activities": "[1.0.7107.42453]"
+    "UiPathTeam.Excel.Extensions.Activities": "[1.0.7107.42453]",
+    "UiPathTeam.XPathWebScrape.Activities": "[1.0.1]"
   },
   "webServices": [],
   "entitiesStores": [],

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "ksRhiewhIkxStCvJFFP71p2hcNmdggH12JpIO9O2d/DscB4+no3VgDBt3Ky1DE2zXEzUkp9nZRzI3v828Cs7ZA==",
+  "dgSpecHash": "tLZ+l6thhGMllC5DnFCMPzNtdVbz7zegoYzakTvXQkk6bknEZupVGh7b3OwyBL10NAdN2YxEGsVuiYLGlMFUrw==",
   "success": true,
   "projectFilePath": "C:\\Users\\XLNC\\Documents\\UiPath\\LinkedInBot\\.local\\",
   "expectedPackageFiles": [
@@ -13,6 +13,7 @@
     "C:\\Users\\XLNC\\.nuget\\packages\\google.apis.core\\1.43.0\\google.apis.core.1.43.0.nupkg.sha512",
     "C:\\Users\\XLNC\\.nuget\\packages\\google.apis.gmail.v1\\1.43.0.1859\\google.apis.gmail.v1.1.43.0.1859.nupkg.sha512",
     "C:\\Users\\XLNC\\.nuget\\packages\\google.apis.peopleservice.v1\\1.43.0.1876\\google.apis.peopleservice.v1.1.43.0.1876.nupkg.sha512",
+    "C:\\Users\\XLNC\\.nuget\\packages\\htmlagilitypack\\1.8.2\\htmlagilitypack.1.8.2.nupkg.sha512",
     "C:\\Users\\XLNC\\.nuget\\packages\\mailkit\\2.10.0\\mailkit.2.10.0.nupkg.sha512",
     "C:\\Users\\XLNC\\.nuget\\packages\\microsoft.aspnet.signalr.client\\2.4.0\\microsoft.aspnet.signalr.client.2.4.0.nupkg.sha512",
     "C:\\Users\\XLNC\\.nuget\\packages\\microsoft.aspnetcore.connections.abstractions\\3.1.6\\microsoft.aspnetcore.connections.abstractions.3.1.6.nupkg.sha512",
@@ -73,7 +74,8 @@
     "C:\\Users\\XLNC\\.nuget\\packages\\uipath.uiautomation.activities\\21.4.3\\uipath.uiautomation.activities.21.4.3.nupkg.sha512",
     "C:\\Users\\XLNC\\.nuget\\packages\\uipath.vision\\3.0.1\\uipath.vision.3.0.1.nupkg.sha512",
     "C:\\Users\\XLNC\\.nuget\\packages\\uipathteam.excel.activities\\1.1.2\\uipathteam.excel.activities.1.1.2.nupkg.sha512",
-    "C:\\Users\\XLNC\\.nuget\\packages\\uipathteam.excel.extensions.activities\\1.0.7107.42453\\uipathteam.excel.extensions.activities.1.0.7107.42453.nupkg.sha512"
+    "C:\\Users\\XLNC\\.nuget\\packages\\uipathteam.excel.extensions.activities\\1.0.7107.42453\\uipathteam.excel.extensions.activities.1.0.7107.42453.nupkg.sha512",
+    "C:\\Users\\XLNC\\.nuget\\packages\\uipathteam.xpathwebscrape.activities\\1.0.1\\uipathteam.xpathwebscrape.activities.1.0.1.nupkg.sha512"
   ],
   "logs": []
 }

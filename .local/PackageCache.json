@@ -301,6 +301,17 @@
         "C:\\Users\\XLNC\\.nuget\\packages\\uipathteam.excel.extensions.activities\\1.0.7107.42453\\lib/net451/Excel.Activities.dll"
       ],
       "Path": "C:\\Users\\XLNC\\.nuget\\packages\\uipathteam.excel.extensions.activities\\1.0.7107.42453"
+    },
+    {
+      "Package": {
+        "Id": "UiPathTeam.XPathWebScrape.Activities",
+        "Version": "1.0.1"
+      },
+      "Assemblies": [
+        "C:\\Users\\XLNC\\.nuget\\packages\\htmlagilitypack\\1.8.2\\lib/Net45/HtmlAgilityPack.dll",
+        "C:\\Users\\XLNC\\.nuget\\packages\\uipathteam.xpathwebscrape.activities\\1.0.1\\lib/XPathWebScrape.dll"
+      ],
+      "Path": "C:\\Users\\XLNC\\.nuget\\packages\\uipathteam.xpathwebscrape.activities\\1.0.1"
     }
   ],
   "Conflicts": [],
@@ -413,6 +424,11 @@
           "Item2": "[1.43.0, )"
         }
       ]
+    },
+    "HtmlAgilityPack": {
+      "Id": "HtmlAgilityPack",
+      "Version": "1.8.2",
+      "Dependencies": []
     },
     "MailKit": {
       "Id": "MailKit",
@@ -1175,6 +1191,16 @@
       "Id": "UiPathTeam.Excel.Extensions.Activities",
       "Version": "1.0.7107.42453",
       "Dependencies": []
+    },
+    "UiPathTeam.XPathWebScrape.Activities": {
+      "Id": "UiPathTeam.XPathWebScrape.Activities",
+      "Version": "1.0.1",
+      "Dependencies": [
+        {
+          "Item1": "HtmlAgilityPack",
+          "Item2": "[1.8.2, )"
+        }
+      ]
     }
   },
   "AllPackages": [
@@ -1269,6 +1295,16 @@
         "C:\\Users\\XLNC\\.nuget\\packages\\google.apis.peopleservice.v1\\1.43.0.1876\\lib\\net45\\Google.Apis.PeopleService.v1.dll"
       ],
       "Path": "C:\\Users\\XLNC\\.nuget\\packages\\google.apis.peopleservice.v1\\1.43.0.1876"
+    },
+    {
+      "Package": {
+        "Id": "HtmlAgilityPack",
+        "Version": "1.8.2"
+      },
+      "Assemblies": [
+        "C:\\Users\\XLNC\\.nuget\\packages\\htmlagilitypack\\1.8.2\\lib\\Net45\\HtmlAgilityPack.dll"
+      ],
+      "Path": "C:\\Users\\XLNC\\.nuget\\packages\\htmlagilitypack\\1.8.2"
     },
     {
       "Package": {
@@ -1911,6 +1947,16 @@
         "C:\\Users\\XLNC\\.nuget\\packages\\uipathteam.excel.extensions.activities\\1.0.7107.42453\\lib\\net451\\Excel.Activities.dll"
       ],
       "Path": "C:\\Users\\XLNC\\.nuget\\packages\\uipathteam.excel.extensions.activities\\1.0.7107.42453"
+    },
+    {
+      "Package": {
+        "Id": "UiPathTeam.XPathWebScrape.Activities",
+        "Version": "1.0.1"
+      },
+      "Assemblies": [
+        "C:\\Users\\XLNC\\.nuget\\packages\\uipathteam.xpathwebscrape.activities\\1.0.1\\lib\\XPathWebScrape.dll"
+      ],
+      "Path": "C:\\Users\\XLNC\\.nuget\\packages\\uipathteam.xpathwebscrape.activities\\1.0.1"
     }
   ]
 }
