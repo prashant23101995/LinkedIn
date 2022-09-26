@@ -5494,15 +5494,15 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Prashant\\.nuget\\packages\\": {}
+    "C:\\Users\\XLNC\\.nuget\\packages\\": {}
   },
   "project": {
     "restore": {
       "projectUniqueName": "LinkedIn",
       "projectName": "LinkedIn",
-      "projectPath": "C:\\Users\\Prashant\\Documents\\UiPath\\LinkedInBot\\.local",
-      "packagesPath": "C:\\Users\\Prashant\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Prashant\\Documents\\UiPath\\LinkedInBot\\.local"
+      "projectPath": "C:\\Users\\XLNC\\Documents\\UiPath\\LinkedInBot\\.local",
+      "packagesPath": "C:\\Users\\XLNC\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\XLNC\\Documents\\UiPath\\LinkedInBot\\.local"
     },
     "frameworks": {
       "net461": {
@@ -5558,7 +5558,7 @@
             "version": "[1.0.1, 1.0.1]"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Users\\Prashant\\AppData\\Local\\Programs\\UiPath\\Studio\\runtime.json"
+        "runtimeIdentifierGraphPath": "C:\\Users\\XLNC\\AppData\\Local\\Programs\\UiPath\\Studio\\runtime.json"
       }
     },
     "runtimes": {

@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Temp" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1208,819" sap2010:WorkflowViewState.IdRef="Temp_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Temp" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1208,563" sap2010:WorkflowViewState.IdRef="Temp_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -62,13 +62,13 @@
       <AssemblyReference>System.Memory</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Temp" sap:VirtualizedContainerService.HintSize="476,609" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Temp" sap:VirtualizedContainerService.HintSize="242,143" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: (5) &quot;talent acquisition&quot; | Search | LinkedIn" sap:VirtualizedContainerService.HintSize="434,517" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="Simulate" Version="V1">
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: (5) &quot;talent acquisition&quot; | Search | LinkedIn" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="Simulate" Version="V1">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
@@ -119,6 +119,12 @@
       <uix:NApplicationCard.TargetApp>
         <uix:TargetApp Area="-8, -8, 1936, 1048" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFVSURBVDhPnZLLSsNQEIbjQ7j3EbJ2dR7BRyi4FXTpMt4QdFE3LoVakQoikVhLsUo0SGsRW7oxKIKpBVdecOVynH9yzqkXMJqBr+efmZyvodRxvMBlfCbMgYLAn67FtHqe/IvZxi2JBB+T1WsC5d6jYPosrGC80qGldp9MFeoxYZaFFYxutGgqutPXiZTfI8yysIKR9YgALro7V5L/ghU4xRNSux39/fwGnMPBq+T7t3fBVLE7IDwvWMHKEanKpX6EBZzDhxfd/Sy3xK/Pd4aC5Tqp7bZes4Bz2H/WXdrPNGLdEU3s8Q/Id4aCxRqprQu95gucwyQV4MQemPIi/g9gZgULh6TKLb1mAecweZKME3tgyjtjAWZWMF8ltdnUaxZw/iLgPTDlnd6kMyuYO/hdwHtgSgSYfRaMrR3LAiAX9ruScRqB2atS85vAC9DkQQRKQi6Cwgf6q7q4SScTvQAAAABJRU5ErkJggg==" InformativeScreenshot="ec80337f56e6f949280e4fe48492483e.png" Selector="&lt;html app='chrome.exe' title='(5) &amp;quot;talent acquisition&amp;quot; | Search | LinkedIn'/&gt;" Url="https://www.linkedin.com/search/results/people/?geoUrn=%5B%22105214831%22%5D&amp;keywords=talent%20acquisition&amp;network=%5B%22O%22%5D&amp;origin=SWITCH_SEARCH_VERTICAL&amp;page=5&amp;sid=vuN" />
       </uix:NApplicationCard.TargetApp>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
     </uix:NApplicationCard>
   </Sequence>
 </Activity>
