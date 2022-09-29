@@ -203,7 +203,7 @@
                                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                           </scg:Dictionary>
                                         </sap:WorkflowViewStateService.ViewState>
-                                        <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Using Existing LinkedIn browser to search connection" sap:VirtualizedContainerService.HintSize="636,2897" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="Simulate" Version="V1">
+                                        <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Using Existing LinkedIn browser to search connection" sap:VirtualizedContainerService.HintSize="636,2897" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="Simulate" Version="V1" WindowResize="Maximize">
                                           <uix:NApplicationCard.Body>
                                             <ActivityAction x:TypeArguments="x:Object">
                                               <ActivityAction.Argument>
