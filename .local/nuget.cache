@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "tttxYsIx/Dtmv6ZqZKA8gQHSPiGs/ZY23EQJJ+qvuEyWMLNVhWLscBaj9zgqua1glNhziaDGmDzflAzRbG8RUw==",
+  "dgSpecHash": "9kYuW852IJ6wfcpJI6WqcysximFIWzMXIF+6tx8BiSuYKh88Jkj6s9NJsJstgAJGp8aUUe+q7lRiOajJzRIoHw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Prashant\\Documents\\UiPath\\LinkedInBot\\.local\\",
   "expectedPackageFiles": [
@@ -15,6 +15,7 @@
     "C:\\Users\\Prashant\\.nuget\\packages\\google.apis.peopleservice.v1\\1.43.0.1876\\google.apis.peopleservice.v1.1.43.0.1876.nupkg.sha512",
     "C:\\Users\\Prashant\\.nuget\\packages\\htmlagilitypack\\1.8.2\\htmlagilitypack.1.8.2.nupkg.sha512",
     "C:\\Users\\Prashant\\.nuget\\packages\\mailkit\\2.10.0\\mailkit.2.10.0.nupkg.sha512",
+    "C:\\Users\\Prashant\\.nuget\\packages\\microsoft.activities.extensions\\2.0.6.9\\microsoft.activities.extensions.2.0.6.9.nupkg.sha512",
     "C:\\Users\\Prashant\\.nuget\\packages\\microsoft.aspnet.signalr.client\\2.4.0\\microsoft.aspnet.signalr.client.2.4.0.nupkg.sha512",
     "C:\\Users\\Prashant\\.nuget\\packages\\microsoft.aspnetcore.connections.abstractions\\3.1.6\\microsoft.aspnetcore.connections.abstractions.3.1.6.nupkg.sha512",
     "C:\\Users\\Prashant\\.nuget\\packages\\microsoft.aspnetcore.http.connections.client\\3.1.6\\microsoft.aspnetcore.http.connections.client.3.1.6.nupkg.sha512",
@@ -44,6 +45,7 @@
     "C:\\Users\\Prashant\\.nuget\\packages\\newtonsoft.json\\11.0.2\\newtonsoft.json.11.0.2.nupkg.sha512",
     "C:\\Users\\Prashant\\.nuget\\packages\\npoi\\2.4.1\\npoi.2.4.1.nupkg.sha512",
     "C:\\Users\\Prashant\\.nuget\\packages\\portable.bouncycastle\\1.8.8\\portable.bouncycastle.1.8.8.nupkg.sha512",
+    "C:\\Users\\Prashant\\.nuget\\packages\\scrollactivity\\1.0.2\\scrollactivity.1.0.2.nupkg.sha512",
     "C:\\Users\\Prashant\\.nuget\\packages\\selenium.support\\3.141.0\\selenium.support.3.141.0.nupkg.sha512",
     "C:\\Users\\Prashant\\.nuget\\packages\\selenium.webdriver\\3.141.0\\selenium.webdriver.3.141.0.nupkg.sha512",
     "C:\\Users\\Prashant\\.nuget\\packages\\sharpziplib\\1.2.0\\sharpziplib.1.2.0.nupkg.sha512",

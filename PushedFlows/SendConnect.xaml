@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="SendConnect" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="SendConnect" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="argName" Type="InArgument(x:String)" />
     <x:Property Name="argURL" Type="InArgument(x:String)" />
@@ -8,7 +8,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1762,4611</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1234,786</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>SendConnect_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="30">
@@ -45,7 +45,7 @@
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="33">
+    <sco:Collection x:TypeArguments="AssemblyReference">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
@@ -78,10 +78,17 @@
       <AssemblyReference>UiPath.Mail</AssemblyReference>
       <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
       <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
-    </scg:List>
+    </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="SendConnect" sap:VirtualizedContainerService.HintSize="1772,4546" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <sap:WorkflowViewStateService.ViewState>
+    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+      <x:Boolean x:Key="ShouldCollapseAll">False</x:Boolean>
+      <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
+    </scg:Dictionary>
+  </sap:WorkflowViewStateService.ViewState>
+  <Sequence DisplayName="SendConnect" sap:VirtualizedContainerService.HintSize="3984,6743" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="vConnectName" />
       <Variable x:TypeArguments="x:String" Name="vConnectURL" />
@@ -98,7 +105,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Assign sap:VirtualizedContainerService.HintSize="1730,60" sap2010:WorkflowViewState.IdRef="Assign_2">
+    <Assign sap:VirtualizedContainerService.HintSize="3942,70" sap2010:WorkflowViewState.IdRef="Assign_2">
       <Assign.To>
         <OutArgument x:TypeArguments="x:String">[vConnectButton]</OutArgument>
       </Assign.To>
@@ -106,7 +113,7 @@
         <InArgument x:TypeArguments="x:String">[argButton]</InArgument>
       </Assign.Value>
     </Assign>
-    <Assign sap:VirtualizedContainerService.HintSize="1730,60" sap2010:WorkflowViewState.IdRef="Assign_3">
+    <Assign sap:VirtualizedContainerService.HintSize="3942,70" sap2010:WorkflowViewState.IdRef="Assign_3">
       <Assign.To>
         <OutArgument x:TypeArguments="x:String">[vConnectName]</OutArgument>
       </Assign.To>
@@ -114,7 +121,7 @@
         <InArgument x:TypeArguments="x:String">[argName]</InArgument>
       </Assign.Value>
     </Assign>
-    <Assign sap:VirtualizedContainerService.HintSize="1730,60" sap2010:WorkflowViewState.IdRef="Assign_4">
+    <Assign sap:VirtualizedContainerService.HintSize="3942,70" sap2010:WorkflowViewState.IdRef="Assign_4">
       <Assign.To>
         <OutArgument x:TypeArguments="x:String">[vConnectURL]</OutArgument>
       </Assign.To>
@@ -122,27 +129,34 @@
         <InArgument x:TypeArguments="x:String">[argURL]</InArgument>
       </Assign.Value>
     </Assign>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1730,91" sap2010:WorkflowViewState.IdRef="LogMessage_6" Message="[&quot;SendConnect &quot;+vConnectName+&quot; - &quot;+vConnectButton+&quot; - &quot;+vConnectURL]" />
-    <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" ContinueOnError="False" DisplayName="Attach LinkedIn open browser" sap:VirtualizedContainerService.HintSize="1730,3923" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="27f7889530899b044c7eadc6a9f79950" Selector="&lt;html app='chrome.exe' title='*| Search | LinkedIn' /&gt;">
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="3942,101" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Info" Message="[&quot;SendConnect &quot;+vConnectName+&quot; - &quot;+vConnectButton+&quot; - &quot;+vConnectURL]">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:LogMessage>
+    <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" ContinueOnError="False" DisplayName="Attach LinkedIn open browser" sap:VirtualizedContainerService.HintSize="3942,6072" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="27f7889530899b044c7eadc6a9f79950" Selector="&lt;html app='chrome.exe' title='*| Search | LinkedIn' /&gt;">
       <ui:BrowserScope.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1696,3778" sap2010:WorkflowViewState.IdRef="Sequence_5">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="3908,5876" sap2010:WorkflowViewState.IdRef="Sequence_5">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <Sequence DisplayName="Clicking on connect button" sap:VirtualizedContainerService.HintSize="1654,3686" sap2010:WorkflowViewState.IdRef="Sequence_4">
+            <Sequence DisplayName="Clicking on connect button" sap:VirtualizedContainerService.HintSize="3866,5786" sap2010:WorkflowViewState.IdRef="Sequence_4">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <If Condition="[vConnectButton.Contains(&quot;Message&quot;) Or vConnectButton.Contains(&quot;Follow&quot;) Or vConnectButton.Contains(&quot;Connect&quot;)]" DisplayName="If Button contain Connect or Message or Follow" sap:VirtualizedContainerService.HintSize="1612,2931" sap2010:WorkflowViewState.IdRef="If_4">
+              <If Condition="[vConnectButton.Contains(&quot;Message&quot;) Or vConnectButton.Contains(&quot;Follow&quot;) Or vConnectButton.Contains(&quot;Connect&quot;)]" DisplayName="If Button contain Connect or Message or Follow" sap:VirtualizedContainerService.HintSize="3804,5523" sap2010:WorkflowViewState.IdRef="If_4">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -150,19 +164,19 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
                 <If.Then>
-                  <Sequence DisplayName="Sequence \\ Performing Actions on Browser" sap:VirtualizedContainerService.HintSize="1325,2773" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                  <Sequence DisplayName="Sequence \\ Performing Actions on Browser" sap:VirtualizedContainerService.HintSize="3359,5356" sap2010:WorkflowViewState.IdRef="Sequence_10">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Always" ContinueOnError="True" DisplayName="Use Browser Chrome: | Search | LinkedIn" sap:VirtualizedContainerService.HintSize="1283,2681" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="Simulate" OpenMode="Always" Version="V1" WindowResize="Maximize">
+                    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Always" ContinueOnError="True" DisplayName="Use Browser Chrome: | Search | LinkedIn" sap:VirtualizedContainerService.HintSize="3317,5266" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="Simulate" OpenMode="Always" Version="V1" WindowResize="Maximize">
                       <uix:NApplicationCard.Body>
                         <ActivityAction x:TypeArguments="x:Object">
                           <ActivityAction.Argument>
                             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                           </ActivityAction.Argument>
-                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1249,2465" sap2010:WorkflowViewState.IdRef="Sequence_14">
+                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="3283,5040" sap2010:WorkflowViewState.IdRef="Sequence_14">
                             <Sequence.Variables>
                               <Variable x:TypeArguments="x:Boolean" Name="bInsidePending" />
                             </Sequence.Variables>
@@ -171,8 +185,8 @@
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                            <Delay Duration="00:00:05" sap:VirtualizedContainerService.HintSize="1207,22" sap2010:WorkflowViewState.IdRef="Delay_4" />
-                            <Sequence sap:VirtualizedContainerService.HintSize="1207,2309" sap2010:WorkflowViewState.IdRef="Sequence_27">
+                            <Delay Duration="00:00:05" sap:VirtualizedContainerService.HintSize="3241,32" sap2010:WorkflowViewState.IdRef="Delay_4" />
+                            <Sequence sap:VirtualizedContainerService.HintSize="3241,4876" sap2010:WorkflowViewState.IdRef="Sequence_27">
                               <Sequence.Variables>
                                 <Variable x:TypeArguments="x:Boolean" Name="vConnectionExists" />
                               </Sequence.Variables>
@@ -182,7 +196,7 @@
                                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <Assign sap:VirtualizedContainerService.HintSize="1165,61" sap2010:WorkflowViewState.IdRef="Assign_18">
+                              <Assign sap:VirtualizedContainerService.HintSize="3179,71" sap2010:WorkflowViewState.IdRef="Assign_18">
                                 <Assign.To>
                                   <OutArgument x:TypeArguments="x:String">[vTempName]</OutArgument>
                                 </Assign.To>
@@ -190,7 +204,7 @@
                                   <InArgument x:TypeArguments="x:String">[vConnectName.Replace(" ","*")]</InArgument>
                                 </Assign.Value>
                               </Assign>
-                              <ui:UiElementExists DisplayName="Element Exists 'SPAN'" Exists="[vConnectionExists]" sap:VirtualizedContainerService.HintSize="1165,106" sap2010:WorkflowViewState.IdRef="UiElementExists_13">
+                              <ui:UiElementExists DisplayName="Element Exists 'SPAN'" Exists="[vConnectionExists]" sap:VirtualizedContainerService.HintSize="3179,116" sap2010:WorkflowViewState.IdRef="UiElementExists_13">
                                 <ui:UiElementExists.Target>
                                   <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="4ea67573-52fb-4842-8130-aec4ee11d4ed" InformativeScreenshot="e16c0d8d1ed3bb5c490c13b8f0a5950f" Selector="[String.Format(&quot;&lt;html app='chrome.exe' title='*{0}*| LinkedIn' /&gt;&lt;webctrl tag='SPAN' aaname='            connections         ' class='t-black--light' innertext='*connections         ' /&gt;&quot;, vTempName)]">
                                     <ui:Target.TimeoutMS>
@@ -208,7 +222,7 @@
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
                               </ui:UiElementExists>
-                              <If Condition="[vConnectionExists]" DisplayName="If //Checking if Connection are visible or considering them &gt; 500" sap:VirtualizedContainerService.HintSize="1165,51" sap2010:WorkflowViewState.IdRef="If_18">
+                              <If Condition="[vConnectionExists]" DisplayName="If //Checking if Connection are visible or considering them &gt; 500" sap:VirtualizedContainerService.HintSize="3179,405" sap2010:WorkflowViewState.IdRef="If_18">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -216,14 +230,14 @@
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
                                 <If.Then>
-                                  <Sequence sap:VirtualizedContainerService.HintSize="376,228" sap2010:WorkflowViewState.IdRef="Sequence_44">
+                                  <Sequence sap:VirtualizedContainerService.HintSize="400,236" sap2010:WorkflowViewState.IdRef="Sequence_44">
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
-                                    <ui:GetAttribute ContinueOnError="{x:Null}" Attribute="innertext" DisplayName="Get Attribute 'SPAN'" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="GetAttribute_1">
+                                    <ui:GetAttribute ContinueOnError="{x:Null}" Attribute="innertext" DisplayName="Get Attribute 'SPAN'" sap:VirtualizedContainerService.HintSize="358,144" sap2010:WorkflowViewState.IdRef="GetAttribute_1">
                                       <ui:GetAttribute.Result>
                                         <OutArgument x:TypeArguments="x:String">[vNoOfConnections]</OutArgument>
                                       </ui:GetAttribute.Result>
@@ -241,14 +255,14 @@
                                   </Sequence>
                                 </If.Then>
                                 <If.Else>
-                                  <Sequence sap:VirtualizedContainerService.HintSize="304,155" sap2010:WorkflowViewState.IdRef="Sequence_45">
+                                  <Sequence sap:VirtualizedContainerService.HintSize="400,163" sap2010:WorkflowViewState.IdRef="Sequence_45">
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
-                                    <Assign sap:VirtualizedContainerService.HintSize="262,61" sap2010:WorkflowViewState.IdRef="Assign_16">
+                                    <Assign sap:VirtualizedContainerService.HintSize="358,71" sap2010:WorkflowViewState.IdRef="Assign_16">
                                       <Assign.To>
                                         <OutArgument x:TypeArguments="x:String">[vNoOfConnections]</OutArgument>
                                       </Assign.To>
@@ -259,7 +273,7 @@
                                   </Sequence>
                                 </If.Else>
                               </If>
-                              <Assign sap:VirtualizedContainerService.HintSize="1165,61" sap2010:WorkflowViewState.IdRef="Assign_15">
+                              <Assign sap:VirtualizedContainerService.HintSize="3179,71" sap2010:WorkflowViewState.IdRef="Assign_15">
                                 <Assign.To>
                                   <OutArgument x:TypeArguments="x:String">[vNoOfConnections]</OutArgument>
                                 </Assign.To>
@@ -267,15 +281,15 @@
                                   <InArgument x:TypeArguments="x:String">[((vNoOfConnections.Replace(" ","")).Replace("connections","")).Replace("+","")]</InArgument>
                                 </Assign.Value>
                               </Assign>
-                              <If Condition="[Convert.ToInt32(vNoOfConnections) &gt;= 500]" DisplayName="If //Checking Whether no of connection are greater" sap:VirtualizedContainerService.HintSize="1165,1776" sap2010:WorkflowViewState.IdRef="If_17">
+                              <If Condition="[Convert.ToInt32(vNoOfConnections) &gt;= 500]" DisplayName="If //Checking Whether no of connection are greater" sap:VirtualizedContainerService.HintSize="3179,3929" sap2010:WorkflowViewState.IdRef="If_17">
                                 <If.Then>
-                                  <Sequence sap:VirtualizedContainerService.HintSize="920,1617" sap2010:WorkflowViewState.IdRef="Sequence_42">
+                                  <Sequence sap:VirtualizedContainerService.HintSize="2734,3760" sap2010:WorkflowViewState.IdRef="Sequence_42">
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
-                                    <ui:UiElementExists DisplayName="Element Exists 'BUTTON //Pending on profile" Exists="[bInsidePending]" sap:VirtualizedContainerService.HintSize="878,51" sap2010:WorkflowViewState.IdRef="UiElementExists_3">
+                                    <ui:UiElementExists DisplayName="Element Exists 'BUTTON //Pending on profile" Exists="[bInsidePending]" sap:VirtualizedContainerService.HintSize="2692,116" sap2010:WorkflowViewState.IdRef="UiElementExists_3">
                                       <ui:UiElementExists.Target>
                                         <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="ef231876-3694-47fb-87d4-f8555a620cb5" InformativeScreenshot="fc2f8a8527bec46d174cbb058d500c8a" Selector="&lt;html app='chrome.exe' title='*| LinkedIn' idx='2' /&gt;&lt;webctrl tag='BUTTON' type='button' aaname='             Pending ' class='artdeco-button artdeco-button--muted artdeco-button--2 artdeco-button--secondary ember-view' innertext='             Pending ' aria-label='Withdraw invitation sent to *' idx='2' /&gt;" TimeoutMS="5000" WaitForReady="COMPLETE" />
                                       </ui:UiElementExists.Target>
@@ -286,7 +300,7 @@
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
                                     </ui:UiElementExists>
-                                    <If Condition="[Not(bInsidePending)]" DisplayName="If \\ Pending Button not exist" sap:VirtualizedContainerService.HintSize="878,1432" sap2010:WorkflowViewState.IdRef="If_6">
+                                    <If Condition="[Not(bInsidePending)]" DisplayName="If \\ Pending Button not exist" sap:VirtualizedContainerService.HintSize="2692,3512" sap2010:WorkflowViewState.IdRef="If_6">
                                       <sap:WorkflowViewStateService.ViewState>
                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -294,7 +308,7 @@
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
                                       <If.Then>
-                                        <Sequence sap:VirtualizedContainerService.HintSize="633,1273" sap2010:WorkflowViewState.IdRef="Sequence_15">
+                                        <Sequence sap:VirtualizedContainerService.HintSize="2247,3343" sap2010:WorkflowViewState.IdRef="Sequence_15">
                                           <Sequence.Variables>
                                             <Variable x:TypeArguments="x:Boolean" Name="bInsideMorePending" />
                                           </Sequence.Variables>
@@ -304,7 +318,7 @@
                                               <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                             </scg:Dictionary>
                                           </sap:WorkflowViewStateService.ViewState>
-                                          <If Condition="[vConnectButton.Contains(&quot;Connect&quot;)]" sap:VirtualizedContainerService.HintSize="591,1179" sap2010:WorkflowViewState.IdRef="If_11">
+                                          <If Condition="[vConnectButton.Contains(&quot;Connect&quot;)]" sap:VirtualizedContainerService.HintSize="2205,3251" sap2010:WorkflowViewState.IdRef="If_11">
                                             <sap:WorkflowViewStateService.ViewState>
                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -312,14 +326,14 @@
                                               </scg:Dictionary>
                                             </sap:WorkflowViewStateService.ViewState>
                                             <If.Then>
-                                              <Sequence sap:VirtualizedContainerService.HintSize="346,1020" sap2010:WorkflowViewState.IdRef="Sequence_26">
+                                              <Sequence sap:VirtualizedContainerService.HintSize="588,2932" sap2010:WorkflowViewState.IdRef="Sequence_26">
                                                 <sap:WorkflowViewStateService.ViewState>
                                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                                   </scg:Dictionary>
                                                 </sap:WorkflowViewStateService.ViewState>
-                                                <Sequence DisplayName="Sequence \\Clicking connect from outside" sap:VirtualizedContainerService.HintSize="304,926" sap2010:WorkflowViewState.IdRef="Sequence_33">
+                                                <Sequence DisplayName="Sequence \\Clicking connect from outside" sap:VirtualizedContainerService.HintSize="546,2840" sap2010:WorkflowViewState.IdRef="Sequence_33">
                                                   <Sequence.Variables>
                                                     <Variable x:TypeArguments="x:Boolean" Name="vOutConnect" />
                                                   </Sequence.Variables>
@@ -329,7 +343,7 @@
                                                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                                     </scg:Dictionary>
                                                   </sap:WorkflowViewStateService.ViewState>
-                                                  <Assign sap:VirtualizedContainerService.HintSize="262,61" sap2010:WorkflowViewState.IdRef="Assign_14">
+                                                  <Assign sap:VirtualizedContainerService.HintSize="484,71" sap2010:WorkflowViewState.IdRef="Assign_14">
                                                     <Assign.To>
                                                       <OutArgument x:TypeArguments="x:String">[vTempName]</OutArgument>
                                                     </Assign.To>
@@ -337,7 +351,7 @@
                                                       <InArgument x:TypeArguments="x:String">[vConnectName.Replace(" ","*")]</InArgument>
                                                     </Assign.Value>
                                                   </Assign>
-                                                  <Assign sap:VirtualizedContainerService.HintSize="262,61" sap2010:WorkflowViewState.IdRef="Assign_12">
+                                                  <Assign sap:VirtualizedContainerService.HintSize="484,71" sap2010:WorkflowViewState.IdRef="Assign_12">
                                                     <Assign.To>
                                                       <OutArgument x:TypeArguments="x:String">[vArialLabelClass]</OutArgument>
                                                     </Assign.To>
@@ -345,52 +359,18 @@
                                                       <InArgument x:TypeArguments="x:String">["Invite "+vConnectName+" to connect"]</InArgument>
                                                     </Assign.Value>
                                                   </Assign>
-                                                  <ui:UiElementExists DisplayName="Element Exists 'BUTTON  ember120'" Exists="[vOutConnect]" sap:VirtualizedContainerService.HintSize="262,51" sap2010:WorkflowViewState.IdRef="UiElementExists_10">
-                                                    <ui:UiElementExists.Target>
-                                                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="64a1da44-de5b-4b50-9d5a-11a00a35dc91" InformativeScreenshot="82ec0b65a0969f382cb7f0848be50763" Selector="[String.Format(&quot;&lt;html app='chrome.exe' idx='3' /&gt;&lt;webctrl aaname='     *Connect ' class='artdeco-button*' innertext='     *Connect ' aria-label='{0}' title='*{1}*| LinkedIn' idx='2' /&gt;&quot;, vArialLabelClass, vTempName)]">
-                                                        <ui:Target.TimeoutMS>
-                                                          <InArgument x:TypeArguments="x:Int32" />
-                                                        </ui:Target.TimeoutMS>
-                                                        <ui:Target.WaitForReady>
-                                                          <InArgument x:TypeArguments="ui:WaitForReady" />
-                                                        </ui:Target.WaitForReady>
-                                                      </ui:Target>
-                                                    </ui:UiElementExists.Target>
-                                                    <sap:WorkflowViewStateService.ViewState>
-                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                                      </scg:Dictionary>
-                                                    </sap:WorkflowViewStateService.ViewState>
-                                                  </ui:UiElementExists>
-                                                  <If Condition="[vOutConnect]" sap:VirtualizedContainerService.HintSize="262,51" sap2010:WorkflowViewState.IdRef="If_14">
-                                                    <sap:WorkflowViewStateService.ViewState>
-                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                                      </scg:Dictionary>
-                                                    </sap:WorkflowViewStateService.ViewState>
-                                                    <If.Then>
-                                                      <Sequence sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_34">
+                                                  <Delay Duration="00:00:02" sap:VirtualizedContainerService.HintSize="484,32" sap2010:WorkflowViewState.IdRef="Delay_7" />
+                                                  <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="484,61" sap2010:WorkflowViewState.IdRef="CommentOut_2">
+                                                    <ui:CommentOut.Body>
+                                                      <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="400,206" sap2010:WorkflowViewState.IdRef="Sequence_48">
                                                         <sap:WorkflowViewStateService.ViewState>
                                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                           </scg:Dictionary>
                                                         </sap:WorkflowViewStateService.ViewState>
-                                                        <ui:Click AlterIfDisabled="{x:Null}" CursorMotionType="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'SPAN'" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="Click_14" KeyModifiers="None" MouseButton="BTN_LEFT">
-                                                          <ui:Click.CursorPosition>
-                                                            <ui:CursorPosition Position="Center">
-                                                              <ui:CursorPosition.OffsetX>
-                                                                <InArgument x:TypeArguments="x:Int32" />
-                                                              </ui:CursorPosition.OffsetX>
-                                                              <ui:CursorPosition.OffsetY>
-                                                                <InArgument x:TypeArguments="x:Int32" />
-                                                              </ui:CursorPosition.OffsetY>
-                                                            </ui:CursorPosition>
-                                                          </ui:Click.CursorPosition>
-                                                          <ui:Click.Target>
-                                                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="4a904915-cc83-44b2-96c9-2ad018c17539" InformativeScreenshot="3c8ef773d1a5c00e1f821f47ecb38c04" Selector="[String.Format(&quot;&lt;html app='chrome.exe' idx='3' /&gt;&lt;webctrl aaname='     *Connect ' class='artdeco-button*' innertext='     *Connect ' aria-label='{0}' title='*{1}*| LinkedIn' idx='2' /&gt;&quot;, vArialLabelClass, vTempName)]">
+                                                        <ui:UiElementExists DisplayName="Element Exists 'BUTTON  ember120'" Exists="[vOutConnect]" sap:VirtualizedContainerService.HintSize="358,116" sap2010:WorkflowViewState.IdRef="UiElementExists_10">
+                                                          <ui:UiElementExists.Target>
+                                                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="64a1da44-de5b-4b50-9d5a-11a00a35dc91" InformativeScreenshot="82ec0b65a0969f382cb7f0848be50763" Selector="[String.Format(&quot;&lt;html app='chrome.exe' /&gt;&lt;webctrl aaname='     *Connect ' omit:class='artdeco-button*' innertext='     *Connect ' title='*{0}*LinkedIn' aria-label='{1}' tag='BUTTON' omit:type='button' /&gt;&quot;, vTempName, vArialLabelClass)]">
                                                               <ui:Target.TimeoutMS>
                                                                 <InArgument x:TypeArguments="x:Int32" />
                                                               </ui:Target.TimeoutMS>
@@ -398,14 +378,84 @@
                                                                 <InArgument x:TypeArguments="ui:WaitForReady" />
                                                               </ui:Target.WaitForReady>
                                                             </ui:Target>
-                                                          </ui:Click.Target>
+                                                          </ui:UiElementExists.Target>
                                                           <sap:WorkflowViewStateService.ViewState>
                                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                               <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                                             </scg:Dictionary>
                                                           </sap:WorkflowViewStateService.ViewState>
-                                                        </ui:Click>
+                                                        </ui:UiElementExists>
+                                                      </Sequence>
+                                                    </ui:CommentOut.Body>
+                                                    <sap:WorkflowViewStateService.ViewState>
+                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                        <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                                                      </scg:Dictionary>
+                                                    </sap:WorkflowViewStateService.ViewState>
+                                                  </ui:CommentOut>
+                                                  <uix:NCheckState DisplayName="Check App State 'Connect'" Exists="[vOutConnect]" sap:VirtualizedContainerService.HintSize="484,61" sap2010:WorkflowViewState.IdRef="NCheckState_1">
+                                                    <uix:NCheckState.IfExists>
+                                                      <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="400,82" sap2010:WorkflowViewState.IdRef="Sequence_49">
+                                                        <sap:WorkflowViewStateService.ViewState>
+                                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                          </scg:Dictionary>
+                                                        </sap:WorkflowViewStateService.ViewState>
+                                                      </Sequence>
+                                                    </uix:NCheckState.IfExists>
+                                                    <uix:NCheckState.IfNotExists>
+                                                      <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="400,82" sap2010:WorkflowViewState.IdRef="Sequence_50">
+                                                        <sap:WorkflowViewStateService.ViewState>
+                                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                          </scg:Dictionary>
+                                                        </sap:WorkflowViewStateService.ViewState>
+                                                      </Sequence>
+                                                    </uix:NCheckState.IfNotExists>
+                                                    <uix:NCheckState.Target>
+                                                      <uix:TargetAnchorable BrowserURL="https://www.linkedin.com/in/mayank-atawane/" DesignTimeRectangle="420, 647, 110, 32" ElementType="Button" FriendlyName="'Connect'" FullSelectorArgument="[String.Format(&quot;&lt;webctrl tag='BUTTON' type='button' aaname='*Connect*' class='artdeco-button artdeco-button--2 artdeco-button--primary ember-view' innertext='*Connect*' aria-label='{0}' idx='2' /&gt;&quot;, vArialLabelClass)]" FuzzySelectorArgument="&lt;webctrl id='ember72' tag='BUTTON' type='button' aaname='             Connect ' check:text='Connect' /&gt;" ImageBase64="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" InformativeScreenshot="965a672b6fd188d3aea61d03064dc895.png" ScopeSelectorArgument="[String.Format(&quot;&lt;html app='chrome.exe' title='*{0}*LinkedIn' /&gt;&quot;, vTempName)]" SearchSteps="Selector">
+                                                        <uix:TargetAnchorable.Anchors>
+                                                          <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                                            <uix:Target DesignTimeRectangle="454, 653, 60, 20" ElementType="Text" FriendlyName="'Connect'" FullSelectorArgument="&lt;webctrl parentid='ember72' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='ember72' tag='SPAN' type='' aaname='     Connect ' check:text='Connect' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEAAAAAYCAYAAABKtPtEAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAANXSURBVFhH7VZJT1NRFHbtD/AX+Atcm7gxMSZqTIwLN25MiMYQ40YXDiwUTQwGSDAaEgQNOCBgUJxwwCBCq4iUMkNpsYXSMnSeW473O+Q+bl8fgQWJwdeTfHm99553zrnfGV537S7pJjOjSIDRpplQJMBo00woEmC0aSYUEHCsyk6fRwMUimdpdZVYkplV6hoL5On9L8gj4OYrF4UTWb50Ip2jyYU4DbmjtBBKk008Vd2dhIffvLQczVBdt7fgTCPgdO0YK2VzRO0DS7T3kqVAeafii6heSL0gQn+mEdAxuMRKKPU9pd8LFFWcezRBdk+UMtm1HkG1WB1hOlRh4/PDd200F0hxNdV88pA3mOJ2iqVyeVmQgTX/8NMvV4TJByyOEO0r69f0Dtz+zW0JP5BIMktPLb68OBHThDeuxQRfrf2LHIdeVCKYABgaFy/HxUtXWma0QyOUNk5RIJZhRwOzEXrx00/u5SRfEO2CwCUBuAxmyceRFdbFGsFfaJpiW5KAaDLHhL63r/Bv2Hpu9bMO7MEu/PVNh+iZ1UeupSTbauhZYJ0b7S6OHTrQRUyj8zFhw8cJwN0gSFJTn49K6ie0+zABasbO1I1rh0bomQxygC3CidxDhmZFUCkxLG91zGr20iKg6k4P64DkkbkY5cS7D7rmeE8S0DsV0rKJS8E+CMO64t0ftvN2aJnXwMUn00zUtC9BRyuHOPMgpLF3jRA9Nm2B/eUDzCqMwrheSeLgnUHyrCQ5i2cb1lkEVCcbEaoPxCgwEAgikUGsUT0bCXyUv3bx7PKF03SiZlizo2JTAgCUF5h/Y1tnWo9/QYDUQT/DlopT90fp/ONJ9oM5c0RUg7SjYksEXGtzch9h0NR+nd9wEKI0UcYYQnIPferwJ/jd68LOdhKAdoE/tI86GCVk9artpseWCADQQ+glCLKMIIY9MVqMrP8PwJBEq+iHIILsd4aZuO0kALbkkMUT/vCZRv9j+EEHJCFuNSb8h0EicY41BPdAS1V1ujV/eQQAV1tnyLmYYGMQOA6KSd4mSlDqXG52aJMYArIwpGSGtpMA4OS9EU6AjAlPVJxqu/KDW/vcArhs2Usnnx2vtvOXAPuwrVZKAQFmQ5EAo00zoUiA0aaZYHICuukvQkcPPmuNxNUAAAAASUVORK5CYII=" SearchSteps="FuzzySelector" />
+                                                          </scg:List>
+                                                        </uix:TargetAnchorable.Anchors>
+                                                      </uix:TargetAnchorable>
+                                                    </uix:NCheckState.Target>
+                                                    <sap:WorkflowViewStateService.ViewState>
+                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                        <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                                                      </scg:Dictionary>
+                                                    </sap:WorkflowViewStateService.ViewState>
+                                                  </uix:NCheckState>
+                                                  <If Condition="[vOutConnect]" sap:VirtualizedContainerService.HintSize="484,464" sap2010:WorkflowViewState.IdRef="If_14">
+                                                    <sap:WorkflowViewStateService.ViewState>
+                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                      </scg:Dictionary>
+                                                    </sap:WorkflowViewStateService.ViewState>
+                                                    <If.Then>
+                                                      <Sequence sap:VirtualizedContainerService.HintSize="400,266" sap2010:WorkflowViewState.IdRef="Sequence_34">
+                                                        <sap:WorkflowViewStateService.ViewState>
+                                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                          </scg:Dictionary>
+                                                        </sap:WorkflowViewStateService.ViewState>
+                                                        <uix:NClick ClickType="Single" DisplayName="Click 'Connect'" sap:VirtualizedContainerService.HintSize="358,176" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left">
+                                                          <uix:NClick.Target>
+                                                            <uix:TargetAnchorable BrowserURL="https://www.linkedin.com/in/mayank-atawane/" DesignTimeRectangle="420, 647, 110, 32" ElementType="Button" FriendlyName="'Connect'" FullSelectorArgument="[String.Format(&quot;&lt;webctrl tag='BUTTON' type='button' aaname='*Connect*' aria-label='{0}' class='artdeco-button artdeco-button--2 artdeco-button--primary ember-view' innertext='*Connect*' idx='2' /&gt;&quot;, vArialLabelClass)]" FuzzySelectorArgument="&lt;webctrl id='ember72' tag='BUTTON' type='button' aaname='             Connect ' check:text='Connect' /&gt;" ImageBase64="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" InformativeScreenshot="78570d861ede8f06625f3373fb9d6877.png" ScopeSelectorArgument="[String.Format(&quot;&lt;html app='chrome.exe' title='*{0}*LinkedIn' /&gt;&quot;, vTempName)]" SearchSteps="Selector, Image">
+                                                              <uix:TargetAnchorable.Anchors>
+                                                                <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                                                  <uix:Target DesignTimeRectangle="454, 653, 60, 20" ElementType="Text" FriendlyName="'Connect'" FullSelectorArgument="&lt;webctrl parentid='ember72' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='ember72' tag='SPAN' type='' aaname='     Connect ' check:text='Connect' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEAAAAAYCAYAAABKtPtEAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAANXSURBVFhH7VZJT1NRFHbtD/AX+Atcm7gxMSZqTIwLN25MiMYQ40YXDiwUTQwGSDAaEgQNOCBgUJxwwCBCq4iUMkNpsYXSMnSeW473O+Q+bl8fgQWJwdeTfHm99553zrnfGV537S7pJjOjSIDRpplQJMBo00woEmC0aSYUEHCsyk6fRwMUimdpdZVYkplV6hoL5On9L8gj4OYrF4UTWb50Ip2jyYU4DbmjtBBKk008Vd2dhIffvLQczVBdt7fgTCPgdO0YK2VzRO0DS7T3kqVAeafii6heSL0gQn+mEdAxuMRKKPU9pd8LFFWcezRBdk+UMtm1HkG1WB1hOlRh4/PDd200F0hxNdV88pA3mOJ2iqVyeVmQgTX/8NMvV4TJByyOEO0r69f0Dtz+zW0JP5BIMktPLb68OBHThDeuxQRfrf2LHIdeVCKYABgaFy/HxUtXWma0QyOUNk5RIJZhRwOzEXrx00/u5SRfEO2CwCUBuAxmyceRFdbFGsFfaJpiW5KAaDLHhL63r/Bv2Hpu9bMO7MEu/PVNh+iZ1UeupSTbauhZYJ0b7S6OHTrQRUyj8zFhw8cJwN0gSFJTn49K6ie0+zABasbO1I1rh0bomQxygC3CidxDhmZFUCkxLG91zGr20iKg6k4P64DkkbkY5cS7D7rmeE8S0DsV0rKJS8E+CMO64t0ftvN2aJnXwMUn00zUtC9BRyuHOPMgpLF3jRA9Nm2B/eUDzCqMwrheSeLgnUHyrCQ5i2cb1lkEVCcbEaoPxCgwEAgikUGsUT0bCXyUv3bx7PKF03SiZlizo2JTAgCUF5h/Y1tnWo9/QYDUQT/DlopT90fp/ONJ9oM5c0RUg7SjYksEXGtzch9h0NR+nd9wEKI0UcYYQnIPferwJ/jd68LOdhKAdoE/tI86GCVk9artpseWCADQQ+glCLKMIIY9MVqMrP8PwJBEq+iHIILsd4aZuO0kALbkkMUT/vCZRv9j+EEHJCFuNSb8h0EicY41BPdAS1V1ujV/eQQAV1tnyLmYYGMQOA6KSd4mSlDqXG52aJMYArIwpGSGtpMA4OS9EU6AjAlPVJxqu/KDW/vcArhs2Usnnx2vtvOXAPuwrVZKAQFmQ5EAo00zoUiA0aaZYHICuukvQkcPPmuNxNUAAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image" />
+                                                                </scg:List>
+                                                              </uix:TargetAnchorable.Anchors>
+                                                            </uix:TargetAnchorable>
+                                                          </uix:NClick.Target>
+                                                        </uix:NClick>
                                                       </Sequence>
                                                     </If.Then>
                                                     <If.Else>
@@ -418,7 +468,7 @@
                                                       </Sequence>
                                                     </If.Else>
                                                   </If>
-                                                  <ui:UiElementExists DisplayName="Element Exists other options" Exists="[bConnectPopupExists]" sap:VirtualizedContainerService.HintSize="262,51" sap2010:WorkflowViewState.IdRef="UiElementExists_11">
+                                                  <ui:UiElementExists DisplayName="Element Exists other options" Exists="[bConnectPopupExists]" sap:VirtualizedContainerService.HintSize="484,116" sap2010:WorkflowViewState.IdRef="UiElementExists_11">
                                                     <ui:UiElementExists.Target>
                                                       <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="1c9fd258-50b2-429b-9ac1-4a5f1458fe58" InformativeScreenshot="69bb6f08b90d8b9f4c87dac5b0ed2727" Selector="[String.Format(&quot;&lt;html app='chrome.exe' title='*{0}*| LinkedIn' /&gt;&lt;webctrl tag='DIV' class='artdeco-modal__content ember-view' innertext='         This helps them remember how they know you.                         Work Colleagues                Classmates                Met at a work-related event                Other                We don&amp;apos;t know each other                 ' /&gt;&quot;, vTempName)]" TimeoutMS="5000" WaitForReady="COMPLETE" />
                                                     </ui:UiElementExists.Target>
@@ -429,7 +479,7 @@
                                                       </scg:Dictionary>
                                                     </sap:WorkflowViewStateService.ViewState>
                                                   </ui:UiElementExists>
-                                                  <If Condition="[bConnectPopupExists]" sap:VirtualizedContainerService.HintSize="262,51" sap2010:WorkflowViewState.IdRef="If_15">
+                                                  <If Condition="[bConnectPopupExists]" sap:VirtualizedContainerService.HintSize="484,562" sap2010:WorkflowViewState.IdRef="If_15">
                                                     <sap:WorkflowViewStateService.ViewState>
                                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                         <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -437,14 +487,14 @@
                                                       </scg:Dictionary>
                                                     </sap:WorkflowViewStateService.ViewState>
                                                     <If.Then>
-                                                      <Sequence sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_37">
+                                                      <Sequence sap:VirtualizedContainerService.HintSize="400,364" sap2010:WorkflowViewState.IdRef="Sequence_37">
                                                         <sap:WorkflowViewStateService.ViewState>
                                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                             <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                                                             <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                                           </scg:Dictionary>
                                                         </sap:WorkflowViewStateService.ViewState>
-                                                        <ui:Click AlterIfDisabled="{x:Null}" CursorMotionType="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'BUTTON other" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="Click_15" KeyModifiers="None" MouseButton="BTN_LEFT">
+                                                        <ui:Click AlterIfDisabled="{x:Null}" CursorMotionType="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'BUTTON other" sap:VirtualizedContainerService.HintSize="358,116" sap2010:WorkflowViewState.IdRef="Click_15" KeyModifiers="None" MouseButton="BTN_LEFT">
                                                           <ui:Click.CursorPosition>
                                                             <ui:CursorPosition Position="Center">
                                                               <ui:CursorPosition.OffsetX>
@@ -472,7 +522,7 @@
                                                             </scg:Dictionary>
                                                           </sap:WorkflowViewStateService.ViewState>
                                                         </ui:Click>
-                                                        <ui:Click AlterIfDisabled="{x:Null}" CursorMotionType="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'BUTTON Connect" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="Click_16" KeyModifiers="None" MouseButton="BTN_LEFT">
+                                                        <ui:Click AlterIfDisabled="{x:Null}" CursorMotionType="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'BUTTON Connect" sap:VirtualizedContainerService.HintSize="358,116" sap2010:WorkflowViewState.IdRef="Click_16" KeyModifiers="None" MouseButton="BTN_LEFT">
                                                           <ui:Click.CursorPosition>
                                                             <ui:CursorPosition Position="Center">
                                                               <ui:CursorPosition.OffsetX>
@@ -512,8 +562,8 @@
                                                       </Sequence>
                                                     </If.Else>
                                                   </If>
-                                                  <Delay Duration="00:00:01" sap:VirtualizedContainerService.HintSize="262,22" sap2010:WorkflowViewState.IdRef="Delay_5" />
-                                                  <ui:UiElementExists DisplayName="Element Exists Final send" Exists="[bFinalConnectPopupExists]" sap:VirtualizedContainerService.HintSize="262,51" sap2010:WorkflowViewState.IdRef="UiElementExists_12">
+                                                  <Delay Duration="00:00:01" sap:VirtualizedContainerService.HintSize="484,32" sap2010:WorkflowViewState.IdRef="Delay_5" />
+                                                  <ui:UiElementExists DisplayName="Element Exists Final send" Exists="[bFinalConnectPopupExists]" sap:VirtualizedContainerService.HintSize="484,116" sap2010:WorkflowViewState.IdRef="UiElementExists_12">
                                                     <ui:UiElementExists.Target>
                                                       <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="1c9fd258-50b2-429b-9ac1-4a5f1458fe58" InformativeScreenshot="7bd1c10cdd9d2195c69bfa5c3cdcecd8" Selector="&lt;webctrl tag='DIV' class='artdeco-modal__header ember-view' innertext='                      You can customize this invitation                 ' /&gt;" TimeoutMS="5000" WaitForReady="COMPLETE" />
                                                     </ui:UiElementExists.Target>
@@ -524,7 +574,7 @@
                                                       </scg:Dictionary>
                                                     </sap:WorkflowViewStateService.ViewState>
                                                   </ui:UiElementExists>
-                                                  <If Condition="[bFinalConnectPopupExists]" sap:VirtualizedContainerService.HintSize="262,51" sap2010:WorkflowViewState.IdRef="If_16">
+                                                  <If Condition="[bFinalConnectPopupExists]" sap:VirtualizedContainerService.HintSize="484,658" sap2010:WorkflowViewState.IdRef="If_16">
                                                     <sap:WorkflowViewStateService.ViewState>
                                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                         <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -532,14 +582,14 @@
                                                       </scg:Dictionary>
                                                     </sap:WorkflowViewStateService.ViewState>
                                                     <If.Then>
-                                                      <Sequence sap:VirtualizedContainerService.HintSize="304,337" sap2010:WorkflowViewState.IdRef="Sequence_39">
+                                                      <Sequence sap:VirtualizedContainerService.HintSize="400,460" sap2010:WorkflowViewState.IdRef="Sequence_39">
                                                         <sap:WorkflowViewStateService.ViewState>
                                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                             <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                                           </scg:Dictionary>
                                                         </sap:WorkflowViewStateService.ViewState>
-                                                        <ui:Click AlterIfDisabled="{x:Null}" CursorMotionType="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'BUTTON Send" sap:VirtualizedContainerService.HintSize="262,51" sap2010:WorkflowViewState.IdRef="Click_17" KeyModifiers="None" MouseButton="BTN_LEFT">
+                                                        <ui:Click AlterIfDisabled="{x:Null}" CursorMotionType="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'BUTTON Send" sap:VirtualizedContainerService.HintSize="358,116" sap2010:WorkflowViewState.IdRef="Click_17" KeyModifiers="None" MouseButton="BTN_LEFT">
                                                           <ui:Click.CursorPosition>
                                                             <ui:CursorPosition Position="Center">
                                                               <ui:CursorPosition.OffsetX>
@@ -567,7 +617,7 @@
                                                             </scg:Dictionary>
                                                           </sap:WorkflowViewStateService.ViewState>
                                                         </ui:Click>
-                                                        <Assign sap:VirtualizedContainerService.HintSize="262,61" sap2010:WorkflowViewState.IdRef="Assign_13">
+                                                        <Assign sap:VirtualizedContainerService.HintSize="358,71" sap2010:WorkflowViewState.IdRef="Assign_13">
                                                           <Assign.To>
                                                             <OutArgument x:TypeArguments="x:String">[vConnectStatus]</OutArgument>
                                                           </Assign.To>
@@ -575,7 +625,7 @@
                                                             <InArgument x:TypeArguments="x:String">[vConnectButton+" - Sent"]</InArgument>
                                                           </Assign.Value>
                                                         </Assign>
-                                                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="262,51" sap2010:WorkflowViewState.IdRef="LogMessage_8" Level="Info" Message="[vConnectButton+&quot; - Sent Sucess&quot;]">
+                                                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="358,101" sap2010:WorkflowViewState.IdRef="LogMessage_8" Level="Info" Message="[vConnectButton+&quot; - Sent Sucess&quot;]">
                                                           <sap:WorkflowViewStateService.ViewState>
                                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                               <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -595,19 +645,19 @@
                                                       </Sequence>
                                                     </If.Else>
                                                   </If>
-                                                  <Delay Duration="00:00:02" sap:VirtualizedContainerService.HintSize="262,22" sap2010:WorkflowViewState.IdRef="Delay_6" />
+                                                  <Delay Duration="00:00:02" sap:VirtualizedContainerService.HintSize="484,32" sap2010:WorkflowViewState.IdRef="Delay_6" />
                                                 </Sequence>
                                               </Sequence>
                                             </If.Then>
                                             <If.Else>
-                                              <Sequence sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_41">
+                                              <Sequence sap:VirtualizedContainerService.HintSize="1572,3082" sap2010:WorkflowViewState.IdRef="Sequence_41">
                                                 <sap:WorkflowViewStateService.ViewState>
                                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                                   </scg:Dictionary>
                                                 </sap:WorkflowViewStateService.ViewState>
-                                                <ui:Click AlterIfDisabled="{x:Null}" CursorMotionType="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DelayBefore="3000" DisplayName="Click on More Button" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="Click_5" KeyModifiers="None" MouseButton="BTN_LEFT">
+                                                <ui:Click AlterIfDisabled="{x:Null}" CursorMotionType="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DelayBefore="3000" DisplayName="Click on More Button" sap:VirtualizedContainerService.HintSize="1530,116" sap2010:WorkflowViewState.IdRef="Click_5" KeyModifiers="None" MouseButton="BTN_LEFT">
                                                   <ui:Click.CursorPosition>
                                                     <ui:CursorPosition Position="Center">
                                                       <ui:CursorPosition.OffsetX>
@@ -635,7 +685,7 @@
                                                     </scg:Dictionary>
                                                   </sap:WorkflowViewStateService.ViewState>
                                                 </ui:Click>
-                                                <ui:UiElementExists DisplayName="Element Exists Pending inside More" Exists="[bInsideMorePending]" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="UiElementExists_4">
+                                                <ui:UiElementExists DisplayName="Element Exists Pending inside More" Exists="[bInsideMorePending]" sap:VirtualizedContainerService.HintSize="1530,116" sap2010:WorkflowViewState.IdRef="UiElementExists_4">
                                                   <ui:UiElementExists.Target>
                                                     <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="ef231876-3694-47fb-87d4-f8555a620cb5" InformativeScreenshot="7ca81b2a527352b266fd437e0f9fe6b3" Selector="&lt;html app='chrome.exe' title='*| LinkedIn' idx='2' /&gt;&lt;webctrl class='display-flex *' aaname='Pending' innertext='Pending' /&gt;" TimeoutMS="5000">
                                                       <ui:Target.WaitForReady>
@@ -650,15 +700,15 @@
                                                     </scg:Dictionary>
                                                   </sap:WorkflowViewStateService.ViewState>
                                                 </ui:UiElementExists>
-                                                <If Condition="[Not(bInsideMorePending)]" DisplayName="If \\Button is not Pending" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="If_7">
+                                                <If Condition="[Not(bInsideMorePending)]" DisplayName="If \\Button is not Pending" sap:VirtualizedContainerService.HintSize="1530,2678" sap2010:WorkflowViewState.IdRef="If_7">
                                                   <sap:WorkflowViewStateService.ViewState>
                                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                                     </scg:Dictionary>
                                                   </sap:WorkflowViewStateService.ViewState>
                                                   <If.Then>
-                                                    <Sequence sap:VirtualizedContainerService.HintSize="526,1384" sap2010:WorkflowViewState.IdRef="Sequence_17">
+                                                    <Sequence sap:VirtualizedContainerService.HintSize="1043,2509" sap2010:WorkflowViewState.IdRef="Sequence_17">
                                                       <Sequence.Variables>
                                                         <Variable x:TypeArguments="x:Boolean" Name="bInsideConnectExists" />
                                                       </Sequence.Variables>
@@ -667,7 +717,7 @@
                                                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                         </scg:Dictionary>
                                                       </sap:WorkflowViewStateService.ViewState>
-                                                      <ui:UiElementExists DisplayName="Element Exists &quot;More&gt;connect&quot;" Exists="[bInsideConnectExists]" sap:VirtualizedContainerService.HintSize="484,106" sap2010:WorkflowViewState.IdRef="UiElementExists_5">
+                                                      <ui:UiElementExists DisplayName="Element Exists &quot;More&gt;connect&quot;" Exists="[bInsideConnectExists]" sap:VirtualizedContainerService.HintSize="1001,116" sap2010:WorkflowViewState.IdRef="UiElementExists_5">
                                                         <ui:UiElementExists.Target>
                                                           <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="00db2bd7-d58c-4d13-8ca0-43731bc99c9d" InformativeScreenshot="c2a9fec4da884fd15a3879f20ca5d5fb" Selector="&lt;html app='chrome.exe' title='*| LinkedIn' idx='2' /&gt;&lt;webctrl tag='SPAN' aaname='Connect' class='display-flex t-normal flex-1' innertext='Connect' idx='2' /&gt;">
                                                             <ui:Target.TimeoutMS>
@@ -679,15 +729,15 @@
                                                           </ui:Target>
                                                         </ui:UiElementExists.Target>
                                                       </ui:UiElementExists>
-                                                      <If Condition="[bInsideConnectExists]" DisplayName="If \\Connect Exist" sap:VirtualizedContainerService.HintSize="484,1144" sap2010:WorkflowViewState.IdRef="If_8">
+                                                      <If Condition="[bInsideConnectExists]" DisplayName="If \\Connect Exist" sap:VirtualizedContainerService.HintSize="1001,2261" sap2010:WorkflowViewState.IdRef="If_8">
                                                         <If.Then>
-                                                          <Sequence sap:VirtualizedContainerService.HintSize="376,958" sap2010:WorkflowViewState.IdRef="Sequence_20">
+                                                          <Sequence sap:VirtualizedContainerService.HintSize="965,2063" sap2010:WorkflowViewState.IdRef="Sequence_20">
                                                             <sap:WorkflowViewStateService.ViewState>
                                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                               </scg:Dictionary>
                                                             </sap:WorkflowViewStateService.ViewState>
-                                                            <ui:Click AlterIfDisabled="{x:Null}" CursorMotionType="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click on Connect" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_6" KeyModifiers="None" MouseButton="BTN_LEFT">
+                                                            <ui:Click AlterIfDisabled="{x:Null}" CursorMotionType="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click on Connect" sap:VirtualizedContainerService.HintSize="923,116" sap2010:WorkflowViewState.IdRef="Click_6" KeyModifiers="None" MouseButton="BTN_LEFT">
                                                               <ui:Click.CursorPosition>
                                                                 <ui:CursorPosition Position="Center">
                                                                   <ui:CursorPosition.OffsetX>
@@ -715,7 +765,7 @@
                                                                 </scg:Dictionary>
                                                               </sap:WorkflowViewStateService.ViewState>
                                                             </ui:Click>
-                                                            <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_11">
+                                                            <Assign sap:VirtualizedContainerService.HintSize="923,71" sap2010:WorkflowViewState.IdRef="Assign_11">
                                                               <Assign.To>
                                                                 <OutArgument x:TypeArguments="x:String">[vTempName]</OutArgument>
                                                               </Assign.To>
@@ -723,34 +773,52 @@
                                                                 <InArgument x:TypeArguments="x:String">[vConnectName.Replace(" ","*")]</InArgument>
                                                               </Assign.Value>
                                                             </Assign>
-                                                            <Delay Duration="00:00:01" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="Delay_2" />
-                                                            <ui:UiElementExists DisplayName="Element Exists other options" Exists="[bConnectPopupExists]" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="UiElementExists_6">
-                                                              <ui:UiElementExists.Target>
-                                                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="1c9fd258-50b2-429b-9ac1-4a5f1458fe58" InformativeScreenshot="69bb6f08b90d8b9f4c87dac5b0ed2727" Selector="[String.Format(&quot;&lt;html app='chrome.exe' title='*{0}*| LinkedIn' /&gt;&lt;webctrl tag='DIV' class='artdeco-modal__content ember-view' innertext='         This helps them remember how they know you.                         Work Colleagues                Classmates                Met at a work-related event                Other                We don&amp;apos;t know each other                 ' /&gt;&quot;, vTempName)]" TimeoutMS="5000" WaitForReady="COMPLETE" />
-                                                              </ui:UiElementExists.Target>
+                                                            <Delay Duration="00:00:02" sap:VirtualizedContainerService.HintSize="923,32" sap2010:WorkflowViewState.IdRef="Delay_2" />
+                                                            <uix:NCheckState DisplayName="Check App State 'This helps'" Exists="[bConnectPopupExists]" sap:VirtualizedContainerService.HintSize="923,61" sap2010:WorkflowViewState.IdRef="NCheckState_2">
+                                                              <uix:NCheckState.IfExists>
+                                                                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="400,82" sap2010:WorkflowViewState.IdRef="Sequence_51">
+                                                                  <sap:WorkflowViewStateService.ViewState>
+                                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                                    </scg:Dictionary>
+                                                                  </sap:WorkflowViewStateService.ViewState>
+                                                                </Sequence>
+                                                              </uix:NCheckState.IfExists>
+                                                              <uix:NCheckState.IfNotExists>
+                                                                <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="400,82" sap2010:WorkflowViewState.IdRef="Sequence_52">
+                                                                  <sap:WorkflowViewStateService.ViewState>
+                                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                                    </scg:Dictionary>
+                                                                  </sap:WorkflowViewStateService.ViewState>
+                                                                </Sequence>
+                                                              </uix:NCheckState.IfNotExists>
+                                                              <uix:NCheckState.Target>
+                                                                <uix:TargetAnchorable BrowserURL="https://www.linkedin.com/in/prateek-raj-861247128/" DesignTimeRectangle="692, 249, 552, 136" FriendlyName="'This helps'" FullSelectorArgument="&lt;webctrl class='artdeco-modal__content ember-view' innertext='         This helps them remember how they know you.                         Work Colleagues                Classmates                Met at a work-related event                Other                We don&amp;apos;t know each other                  ' parentclass='artdeco-modal artdeco-modal--layer-default send-invite' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ember236' tag='DIV' type='' aaname='                          ' check:text='This helps them remember how they know you.&amp;#xA;&amp;#xA;        &amp;#xA;              Work Colleagues&amp;#xA;&amp;#xA;             ' /&gt;" ImageBase64="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" InformativeScreenshot="67c49459a7862e85efef24643395b5fa.png" ScopeSelectorArgument="[String.Format(&quot;&lt;html app='chrome.exe' title='*{0}*LinkedIn' /&gt;&quot;, vTempName)]" SearchSteps="Selector" />
+                                                              </uix:NCheckState.Target>
+                                                              <sap:WorkflowViewStateService.ViewState>
+                                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                                  <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                                                                </scg:Dictionary>
+                                                              </sap:WorkflowViewStateService.ViewState>
+                                                            </uix:NCheckState>
+                                                            <If Condition="[bConnectPopupExists]" sap:VirtualizedContainerService.HintSize="923,533" sap2010:WorkflowViewState.IdRef="If_9">
                                                               <sap:WorkflowViewStateService.ViewState>
                                                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                                                 </scg:Dictionary>
                                                               </sap:WorkflowViewStateService.ViewState>
-                                                            </ui:UiElementExists>
-                                                            <If Condition="[bConnectPopupExists]" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="If_9">
-                                                              <sap:WorkflowViewStateService.ViewState>
-                                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                                                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                                                </scg:Dictionary>
-                                                              </sap:WorkflowViewStateService.ViewState>
                                                               <If.Then>
-                                                                <Sequence sap:VirtualizedContainerService.HintSize="376,289" sap2010:WorkflowViewState.IdRef="Sequence_22">
+                                                                <Sequence sap:VirtualizedContainerService.HintSize="400,364" sap2010:WorkflowViewState.IdRef="Sequence_22">
                                                                   <sap:WorkflowViewStateService.ViewState>
                                                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                                                     </scg:Dictionary>
                                                                   </sap:WorkflowViewStateService.ViewState>
-                                                                  <ui:Click AlterIfDisabled="{x:Null}" CursorMotionType="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'BUTTON other" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_7" KeyModifiers="None" MouseButton="BTN_LEFT">
+                                                                  <ui:Click AlterIfDisabled="{x:Null}" CursorMotionType="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'BUTTON other" sap:VirtualizedContainerService.HintSize="358,116" sap2010:WorkflowViewState.IdRef="Click_7" KeyModifiers="None" MouseButton="BTN_LEFT">
                                                                     <ui:Click.CursorPosition>
                                                                       <ui:CursorPosition Position="Center">
                                                                         <ui:CursorPosition.OffsetX>
@@ -778,7 +846,7 @@
                                                                       </scg:Dictionary>
                                                                     </sap:WorkflowViewStateService.ViewState>
                                                                   </ui:Click>
-                                                                  <ui:Click AlterIfDisabled="{x:Null}" CursorMotionType="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'BUTTON Connect" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="Click_8" KeyModifiers="None" MouseButton="BTN_LEFT">
+                                                                  <ui:Click AlterIfDisabled="{x:Null}" CursorMotionType="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'BUTTON Connect" sap:VirtualizedContainerService.HintSize="358,116" sap2010:WorkflowViewState.IdRef="Click_8" KeyModifiers="None" MouseButton="BTN_LEFT">
                                                                     <ui:Click.CursorPosition>
                                                                       <ui:CursorPosition Position="Center">
                                                                         <ui:CursorPosition.OffsetX>
@@ -801,7 +869,7 @@
                                                                     </ui:Click.Target>
                                                                     <sap:WorkflowViewStateService.ViewState>
                                                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                                                       </scg:Dictionary>
                                                                     </sap:WorkflowViewStateService.ViewState>
@@ -809,17 +877,30 @@
                                                                 </Sequence>
                                                               </If.Then>
                                                               <If.Else>
-                                                                <Sequence sap2010:WorkflowViewState.IdRef="Sequence_23">
+                                                                <Sequence sap:VirtualizedContainerService.HintSize="478,339" sap2010:WorkflowViewState.IdRef="Sequence_23">
                                                                   <sap:WorkflowViewStateService.ViewState>
                                                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                                                     </scg:Dictionary>
                                                                   </sap:WorkflowViewStateService.ViewState>
+                                                                  <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="436,247" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+                                                                    <ui:CommentOut.Body>
+                                                                      <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="400,159" sap2010:WorkflowViewState.IdRef="Sequence_47">
+                                                                        <sap:WorkflowViewStateService.ViewState>
+                                                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                                          </scg:Dictionary>
+                                                                        </sap:WorkflowViewStateService.ViewState>
+                                                                        <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="358,69" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;Other button not exists - &quot;+vTempName]" />
+                                                                      </Sequence>
+                                                                    </ui:CommentOut.Body>
+                                                                  </ui:CommentOut>
                                                                 </Sequence>
                                                               </If.Else>
                                                             </If>
-                                                            <Delay Duration="00:00:01" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="Delay_3" />
-                                                            <ui:UiElementExists DisplayName="Element Exists Final send" Exists="[bFinalConnectPopupExists]" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="UiElementExists_7">
+                                                            <Delay Duration="00:00:02" sap:VirtualizedContainerService.HintSize="923,32" sap2010:WorkflowViewState.IdRef="Delay_3" />
+                                                            <ui:UiElementExists DisplayName="Element Exists Final send" Exists="[bFinalConnectPopupExists]" sap:VirtualizedContainerService.HintSize="923,116" sap2010:WorkflowViewState.IdRef="UiElementExists_7">
                                                               <ui:UiElementExists.Target>
                                                                 <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="1c9fd258-50b2-429b-9ac1-4a5f1458fe58" InformativeScreenshot="7bd1c10cdd9d2195c69bfa5c3cdcecd8" Selector="&lt;webctrl tag='DIV' class='artdeco-modal__header ember-view' innertext='                      You can customize this invitation                 ' /&gt;" TimeoutMS="5000" WaitForReady="COMPLETE" />
                                                               </ui:UiElementExists.Target>
@@ -830,7 +911,7 @@
                                                                 </scg:Dictionary>
                                                               </sap:WorkflowViewStateService.ViewState>
                                                             </ui:UiElementExists>
-                                                            <If Condition="[bFinalConnectPopupExists]" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="If_10">
+                                                            <If Condition="[bFinalConnectPopupExists]" sap:VirtualizedContainerService.HintSize="923,658" sap2010:WorkflowViewState.IdRef="If_10">
                                                               <sap:WorkflowViewStateService.ViewState>
                                                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                   <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -838,14 +919,14 @@
                                                                 </scg:Dictionary>
                                                               </sap:WorkflowViewStateService.ViewState>
                                                               <If.Then>
-                                                                <Sequence sap:VirtualizedContainerService.HintSize="304,335" sap2010:WorkflowViewState.IdRef="Sequence_24">
+                                                                <Sequence sap:VirtualizedContainerService.HintSize="400,460" sap2010:WorkflowViewState.IdRef="Sequence_24">
                                                                   <sap:WorkflowViewStateService.ViewState>
                                                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                                                     </scg:Dictionary>
                                                                   </sap:WorkflowViewStateService.ViewState>
-                                                                  <ui:Click AlterIfDisabled="{x:Null}" CursorMotionType="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'BUTTON Send" sap:VirtualizedContainerService.HintSize="262,51" sap2010:WorkflowViewState.IdRef="Click_9" KeyModifiers="None" MouseButton="BTN_LEFT">
+                                                                  <ui:Click AlterIfDisabled="{x:Null}" CursorMotionType="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'BUTTON Send" sap:VirtualizedContainerService.HintSize="358,116" sap2010:WorkflowViewState.IdRef="Click_9" KeyModifiers="None" MouseButton="BTN_LEFT">
                                                                     <ui:Click.CursorPosition>
                                                                       <ui:CursorPosition Position="Center">
                                                                         <ui:CursorPosition.OffsetX>
@@ -873,7 +954,7 @@
                                                                       </scg:Dictionary>
                                                                     </sap:WorkflowViewStateService.ViewState>
                                                                   </ui:Click>
-                                                                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="262,51" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Sent Sucessfully to &quot;+vConnectName]">
+                                                                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="358,101" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Sent Sucessfully to &quot;+vConnectName]">
                                                                     <sap:WorkflowViewStateService.ViewState>
                                                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                         <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -881,7 +962,7 @@
                                                                       </scg:Dictionary>
                                                                     </sap:WorkflowViewStateService.ViewState>
                                                                   </ui:LogMessage>
-                                                                  <Assign sap:VirtualizedContainerService.HintSize="262,61" sap2010:WorkflowViewState.IdRef="Assign_9">
+                                                                  <Assign sap:VirtualizedContainerService.HintSize="358,71" sap2010:WorkflowViewState.IdRef="Assign_9">
                                                                     <Assign.To>
                                                                       <OutArgument x:TypeArguments="x:String">[vConnectStatus]</OutArgument>
                                                                     </Assign.To>
@@ -901,7 +982,7 @@
                                                                 </Sequence>
                                                               </If.Else>
                                                             </If>
-                                                            <Delay Duration="00:00:02" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="Delay_1" />
+                                                            <Delay Duration="00:00:02" sap:VirtualizedContainerService.HintSize="923,32" sap2010:WorkflowViewState.IdRef="Delay_1" />
                                                           </Sequence>
                                                         </If.Then>
                                                         <If.Else>
@@ -917,21 +998,21 @@
                                                     </Sequence>
                                                   </If.Then>
                                                   <If.Else>
-                                                    <Sequence sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_19">
+                                                    <Sequence sap:VirtualizedContainerService.HintSize="442,428" sap2010:WorkflowViewState.IdRef="Sequence_19">
                                                       <sap:WorkflowViewStateService.ViewState>
                                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                                                           <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                                         </scg:Dictionary>
                                                       </sap:WorkflowViewStateService.ViewState>
-                                                      <Sequence DisplayName="Sequence \\ Updating final status" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_18">
+                                                      <Sequence DisplayName="Sequence \\ Updating final status" sap:VirtualizedContainerService.HintSize="400,336" sap2010:WorkflowViewState.IdRef="Sequence_18">
                                                         <sap:WorkflowViewStateService.ViewState>
                                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                             <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                                                             <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                                           </scg:Dictionary>
                                                         </sap:WorkflowViewStateService.ViewState>
-                                                        <Assign sap:VirtualizedContainerService.HintSize="262,61" sap2010:WorkflowViewState.IdRef="Assign_8">
+                                                        <Assign sap:VirtualizedContainerService.HintSize="338,71" sap2010:WorkflowViewState.IdRef="Assign_8">
                                                           <Assign.To>
                                                             <OutArgument x:TypeArguments="x:String">[vConnectStatus]</OutArgument>
                                                           </Assign.To>
@@ -939,7 +1020,7 @@
                                                             <InArgument x:TypeArguments="x:String">[vConnectButton+" - Already Sent"]</InArgument>
                                                           </Assign.Value>
                                                         </Assign>
-                                                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="262,51" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[vConnectButton+&quot; - Already Sent&quot;]">
+                                                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="338,101" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[vConnectButton+&quot; - Already Sent&quot;]">
                                                           <sap:WorkflowViewStateService.ViewState>
                                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                               <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -957,14 +1038,14 @@
                                         </Sequence>
                                       </If.Then>
                                       <If.Else>
-                                        <Sequence DisplayName="Sequence \\ Updating final status" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_16">
+                                        <Sequence DisplayName="Sequence \\ Updating final status" sap:VirtualizedContainerService.HintSize="400,264" sap2010:WorkflowViewState.IdRef="Sequence_16">
                                           <sap:WorkflowViewStateService.ViewState>
                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                               <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                                               <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                             </scg:Dictionary>
                                           </sap:WorkflowViewStateService.ViewState>
-                                          <Assign sap:VirtualizedContainerService.HintSize="262,61" sap2010:WorkflowViewState.IdRef="Assign_7">
+                                          <Assign sap:VirtualizedContainerService.HintSize="358,71" sap2010:WorkflowViewState.IdRef="Assign_7">
                                             <Assign.To>
                                               <OutArgument x:TypeArguments="x:String">[vConnectStatus]</OutArgument>
                                             </Assign.To>
@@ -972,11 +1053,11 @@
                                               <InArgument x:TypeArguments="x:String">[vConnectButton+" - Already Sent"]</InArgument>
                                             </Assign.Value>
                                           </Assign>
-                                          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="262,51" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[vConnectButton+&quot; - Already Sent&quot;]">
+                                          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="358,61" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[vConnectButton+&quot; - Already Sent&quot;]">
                                             <sap:WorkflowViewStateService.ViewState>
                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                 <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                <x:Boolean x:Key="IsPinned">True</x:Boolean>
                                               </scg:Dictionary>
                                             </sap:WorkflowViewStateService.ViewState>
                                           </ui:LogMessage>
@@ -986,14 +1067,14 @@
                                   </Sequence>
                                 </If.Then>
                                 <If.Else>
-                                  <Sequence DisplayName="Sequence \\ Updating final status as Not sent" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_46">
+                                  <Sequence DisplayName="Sequence \\ Updating final status as Not sent" sap:VirtualizedContainerService.HintSize="400,264" sap2010:WorkflowViewState.IdRef="Sequence_46">
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                         <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
-                                    <Assign sap:VirtualizedContainerService.HintSize="262,61" sap2010:WorkflowViewState.IdRef="Assign_17">
+                                    <Assign sap:VirtualizedContainerService.HintSize="358,71" sap2010:WorkflowViewState.IdRef="Assign_17">
                                       <Assign.To>
                                         <OutArgument x:TypeArguments="x:String">[vConnectStatus]</OutArgument>
                                       </Assign.To>
@@ -1001,11 +1082,11 @@
                                         <InArgument x:TypeArguments="x:String">[vConnectButton+" - Not Sent - Connections - "+vNoOfConnections]</InArgument>
                                       </Assign.Value>
                                     </Assign>
-                                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="262,51" sap2010:WorkflowViewState.IdRef="LogMessage_9" Level="Info" Message="[vConnectButton+&quot; - Not Sent - Connections - &quot;+vNoOfConnections]">
+                                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="358,61" sap2010:WorkflowViewState.IdRef="LogMessage_9" Level="Info" Message="[vConnectButton+&quot; - Not Sent - Connections - &quot;+vNoOfConnections]">
                                       <sap:WorkflowViewStateService.ViewState>
                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                          <x:Boolean x:Key="IsPinned">True</x:Boolean>
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
                                     </ui:LogMessage>
@@ -1023,22 +1104,22 @@
                   </Sequence>
                 </If.Then>
                 <If.Else>
-                  <Sequence DisplayName="Sequence \\Button is pending" sap:VirtualizedContainerService.HintSize="242,143" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                  <Sequence DisplayName="Sequence \\Button is pending" sap:VirtualizedContainerService.HintSize="400,151" sap2010:WorkflowViewState.IdRef="Sequence_11">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <If Condition="[vConnectButton.Contains(&quot;Pending&quot;)]" DisplayName="If \\ Assinging final status" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="If_5">
+                    <If Condition="[vConnectButton.Contains(&quot;Pending&quot;)]" DisplayName="If \\ Assinging final status" sap:VirtualizedContainerService.HintSize="358,61" sap2010:WorkflowViewState.IdRef="If_5">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                       <If.Then>
-                        <Sequence sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                        <Sequence sap:VirtualizedContainerService.HintSize="400,80" sap2010:WorkflowViewState.IdRef="Sequence_12">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -1076,7 +1157,7 @@
                   </Sequence>
                 </If.Else>
               </If>
-              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1612,91" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info" Message="[&quot;Status - &quot;+vConnectStatus]" />
+              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="3684,101" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info" Message="[&quot;Status - &quot;+vConnectStatus]" />
             </Sequence>
           </Sequence>
         </ActivityAction>
@@ -1088,7 +1169,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:BrowserScope>
-    <Assign sap:VirtualizedContainerService.HintSize="1730,60" sap2010:WorkflowViewState.IdRef="Assign_10">
+    <Assign sap:VirtualizedContainerService.HintSize="3942,70" sap2010:WorkflowViewState.IdRef="Assign_10">
       <Assign.To>
         <OutArgument x:TypeArguments="x:String">[argStatus]</OutArgument>
       </Assign.To>

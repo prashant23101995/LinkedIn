@@ -3,6 +3,7 @@
   "description": "LinkedInBots",
   "main": "Main.xaml",
   "dependencies": {
+    "ScrollActivity": "[1.0.2]",
     "Selenium.Support": "[3.141.0]",
     "Selenium.WebDriver": "[3.141.0]",
     "UiPath.CefSharpBundle": "[1.4.0]",
@@ -33,7 +34,8 @@
     "executionType": "Workflow",
     "readyForPiP": false,
     "startsInPiP": false,
-    "mustRestoreAllDependencies": false
+    "mustRestoreAllDependencies": false,
+    "pipType": "ChildSession"
   },
   "designOptions": {
     "projectProfile": "Developement",
